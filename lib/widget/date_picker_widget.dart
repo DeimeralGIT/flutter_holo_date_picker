@@ -229,8 +229,7 @@ class _DatePickerWidgetState extends State<DatePickerWidget> {
                     SizedBox(width: MediaQuery.of(context).size.width * 0.02),
                     Expanded(
                       child: Divider(
-                        color: widget.pickerTheme!.dividerColor ??
-                            widget.pickerTheme!.itemTextStyle.color,
+                        color: Theme.of(context).colorScheme.pageDotsColor,
                         height: 1,
                         thickness: 2,
                       ),
