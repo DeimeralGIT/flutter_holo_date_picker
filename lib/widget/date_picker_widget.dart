@@ -9,6 +9,9 @@ import '../date_picker_theme.dart';
 import '../date_picker_constants.dart';
 import '../i18n/date_picker_i18n.dart';
 
+import '../common/mixins/intput_field_theme.dart';
+import '../utilities/cw_theme.dart';
+
 /// Solar months of 31 days.
 const List<int> _solarMonthsOf31Days = const <int>[1, 3, 5, 7, 8, 10, 12];
 
@@ -191,13 +194,12 @@ class _DatePickerWidgetState extends State<DatePickerWidget> {
           Positioned(
             child: Container(
               padding: EdgeInsets.symmetric(horizontal: 7, vertical: 18),
-              height: widget.pickerTheme!.pickerHeight,
+              height: 250,
               decoration:
                   BoxDecoration(color: widget.pickerTheme!.backgroundColor),
               child: CupertinoPicker(
-                useMagnifier: true,
+                backgroundColor: Theme.of(context).colorScheme.defaultBGColor,
                 selectionOverlay: Container(),
-                backgroundColor: widget.pickerTheme!.backgroundColor,
                 scrollController: scrollCtrl,
                 squeeze: 0.95,
                 diameterRatio: 1.5,
