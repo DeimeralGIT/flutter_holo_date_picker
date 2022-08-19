@@ -280,8 +280,6 @@ class _DatePickerWidgetState extends State<DatePickerWidget> {
         DateTimeFormatter.formatDateTime(value, format, widget.locale, weekday),
         maxLines: 1,
         style: CWTextStyle(CWTextTypes.primaryText, context),
-        style: widget.pickerTheme?.itemTextStyle ??
-            DATETIME_PICKER_ITEM_TEXT_STYLE,
       ),
     );
   }
