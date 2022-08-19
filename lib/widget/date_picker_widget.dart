@@ -196,7 +196,7 @@ class _DatePickerWidgetState extends State<DatePickerWidget> {
               padding: EdgeInsets.symmetric(horizontal: 7, vertical: 18),
               height: 250,
               decoration:
-                  BoxDecoration(color: widget.pickerTheme!.backgroundColor),
+                  BoxDecoration(color: Theme.of(context).colorScheme.defaultBGColor,),
               child: CupertinoPicker(
                 backgroundColor: Theme.of(context).colorScheme.defaultBGColor,
                 selectionOverlay: Container(),
@@ -247,8 +247,7 @@ class _DatePickerWidgetState extends State<DatePickerWidget> {
                     SizedBox(width: MediaQuery.of(context).size.width * 0.02),
                     Expanded(
                       child: Divider(
-                        color: widget.pickerTheme!.dividerColor ??
-                            widget.pickerTheme!.itemTextStyle.color,
+                        color: Theme.of(context).colorScheme.pageDotsColor,
                         height: 1,
                         thickness: 2,
                       ),
@@ -279,10 +278,7 @@ class _DatePickerWidgetState extends State<DatePickerWidget> {
       child: AutoSizeText(
         DateTimeFormatter.formatDateTime(value, format, widget.locale, weekday),
         maxLines: 1,
-        // style: TextStyle(
-        //     color: widget.pickerTheme!.itemTextStyle.color,
-        //     fontSize: fontSize ?? widget.pickerTheme!.itemTextStyle.fontSize
-        // ),
+        style: CWTextStyle(CWTextTypes.primaryText, context),
         style: widget.pickerTheme?.itemTextStyle ??
             DATETIME_PICKER_ITEM_TEXT_STYLE,
       ),
