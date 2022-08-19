@@ -222,7 +222,7 @@ class _DatePickerWidgetState extends State<DatePickerWidget> {
           ),
           Positioned(
             child: Container(
-                margin: const EdgeInsets.only(top: 63),
+                margin: const EdgeInsets.only(top: 135),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
