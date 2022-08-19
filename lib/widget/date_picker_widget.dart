@@ -11,7 +11,7 @@ import '../i18n/date_picker_i18n.dart';
 
 import 'package:insurance_app/core/common/mixins/intput_field_theme.dart';
 import 'package:insurance_app/core/utilities/cw_theme.dart';
-import 'package:insurance_app/core/utilities/cw_theme.dart';
+import 'package:insurance_app/core/reusable_widgets/cw_text.dart';
 
 /// Solar months of 31 days.
 const List<int> _solarMonthsOf31Days = const <int>[1, 3, 5, 7, 8, 10, 12];
